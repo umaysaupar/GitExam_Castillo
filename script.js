@@ -1,27 +1,32 @@
 function changeTableStyle() {
     let table = document.getElementById("studentTable");
-    
 
     if (!table) {
         console.log("Table not found");
         return;
     }
 
-
-    table.style.border = "2px solid red";
     table.style.backgroundColor = "yellow";
 
- 
     let ths = table.getElementsByTagName("th");
     for (let th of ths) {
-        th.style.backgroundColor = "red";
+        th.style.backgroundColor = "blue";
         th.style.color = "white";
     }
 
+    let rows = table.getElementsByTagName("tr");
+    for (let row of rows) {
+        let cells = row.getElementsByTagName("td");
+        if (cells.length > 0) {
+            let name = cells[0].textContent;
+            let age = cells[1].textContent;
+            let course = cells[2].textContent;
 
-    let tds = table.getElementsByTagName("td");
-    for (let td of tds) {
-        td.style.backgroundColor = "lightyellow";
-        td.style.color = "black";
+            if (name === "Maria Santos" && age === "19" && course === "Information Technology") {
+                row.style.backgroundColor = "white";
+            } else {
+                row.style.backgroundColor = "yellow";
+            }
+        }
     }
 }

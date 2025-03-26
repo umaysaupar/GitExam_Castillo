@@ -4,6 +4,26 @@ body {
     margin: 20px;
 }
 
+ul {
+    display: inline-block;
+    text-align: left;
+    padding: 0;
+}
+
+button {
+    display: block;
+    margin: 20px auto 0; /* Centers the button */
+    padding: 10px 20px;
+    background-color: green;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: darkgreen;
+}
+
 table {
     width: 60%;
     margin: 0 auto;
@@ -17,17 +37,4 @@ th, td {
 
 th {
     background-color: rgb(49, 86, 250);
-}
-
-button {
-    margin-top: 20px;
-    padding: 10px 20px;
-    background-color: green;
-    color: white;
-    border: none;
-    cursor: pointer;
-}
-
-button:hover {
-    background-color: darkgreen;
 }
